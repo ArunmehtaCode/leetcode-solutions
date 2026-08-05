@@ -33,16 +33,3 @@ public:
     }
 };
 
-int main() {
-
-    Solution obj;
-
-    int n;
-    cout << "Enter n: ";
-    cin >> n;
-
-    cout << "Number of primes less than " << n << " = "
-         << obj.countPrimes(n);
-
-    return 0;
-}
