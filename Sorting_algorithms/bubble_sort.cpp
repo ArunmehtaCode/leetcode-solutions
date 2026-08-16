@@ -26,6 +26,6 @@ int main(){
 }
 
      // Best Time Complexity  is O(n) --> Occurs when the input array is already sorted.
-     // average time complexity is lie between n and n² --> occurs when array is partially sorted
-     // Worst Time Complexity i O(n²)  --> Occurs when the array is sorted in reverse
+     // average time complexity is lie between n and n² --> occurs when array is partially sorted .
+     // Worst Time Complexity i O(n²)  --> Occurs when the array is sorted in reverse .
      // Space Complexity is O(1)
