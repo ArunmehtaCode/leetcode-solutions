@@ -1,17 +1,20 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int arr[]={4,23,43,0,5};
-    int n=5;
+    int arr[]={1,4,3,1,5,4,0,9};
+    int n=8;
     for(int i=0;i<n-1;i++){
-        for(int j=0;j<n-i-1;j++){
-            int int_min = arr[i];
-            if(int_min>arr[j+1]){
-                swap(arr[i],arr[j+1]);
+        int minIdx = i;
+        for(int j=i+1;j<n;j++){
+            if(arr[j]<arr[minIdx]){
+                minIdx = j;
             }
         }
+        swap(arr[i],arr[minIdx]);
     }
-    for(int num : arr){
+    for( int num : arr){
         cout<<num<<" ";
     }
+
+    
 }
