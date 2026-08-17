@@ -15,7 +15,7 @@ int main(){
             flag = true;
         }
     }
-    if(flag==false){   // this flag is used to check if any swap happened or not,  if no swap happen that meand array is sorted now so no need to run further loop
+    if(!flag){   // this flag is used to check if any swap happened or not,  if no swap happen that meand array is sorted now so no need to run further loop
         break;
     }
 }
