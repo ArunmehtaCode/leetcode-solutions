@@ -10,7 +10,7 @@
 using namespace std;
 int main(){
     int arr[]={1,4,3,1,5,4,0,9};
-    int n=8;
+    int n=8;                                     // for perfect code understanding you can see CB_DSAcode file
     for(int i=0;i<n-1;i++){
         int minIdx = i;
         for(int j=i+1;j<n;j++){
