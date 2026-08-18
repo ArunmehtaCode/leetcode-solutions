@@ -1,69 +1,4 @@
-// #include<iostream>
-// using namespace std;
-// int main(){
-//     int arr[]={0,34,5,67,4};
-//     int n =5;
-//     for(int i=0;i<n-1;i++){
-//         for(int j=0;j<n-i-1;j++){
-//             if(arr[j]>arr[j+1]){
-//                 swap(arr[j],arr[j+1]);
-//             }
-//         }
-
-//     }
-//     for(int num : arr){
-//         cout<<num<<" ";
-//     }
-// }
-
-
-// #include<iostream>
-// using namespace std;
-// int main(){
-//     int arr[]={0,34,5,67,4};
-//     int n =5;
-//     for(int i=0;i<n-1;i++){
-//         int minIDx = i;
-//         for(int j=i+1;j<n;j++){
-//             if(arr[j]<arr[minIDx]){
-//                 minIDx = j;
-//             }
-
-//         }
-//         swap(arr[minIDx],arr[i]);
-//     }
-//         for(int num : arr){
-//         cout<<num<<" ";
-//     }
-
-
-
-#include<iostream>
-using namespace std;
-int main(){
-    int arr[]={0,34,5,67,4};
-    int n =5;
-    for(int i=1;i<n;i++){
-        int current = arr[i];     // We store arr[i] in current because the array changes while shifting elements.
-                                  // If we use current = i and then arr[current], its value may change during shifting, so we would lose the original element.
-        int previous = i-1;    
-        while(previous>=0 && arr[previous]>current){
-            arr[previous+1]=arr[previous];
-            previous--;
-        }
-      arr[previous+1]=current;
-    }
-         for(int num : arr){
-        cout<<num<<" ";
-    }
-    
-}
-
-
-
-// }
-
-// The easiest way to remember the difference is:
+                    // The easiest way to remember the difference is:
 
 // Bubble = swap neighbors
 // Selection = find minimum, then swap
@@ -175,3 +110,71 @@ int main(){
 // All three are O(n²) average/worst-case, so they're not what you'd normally choose for large data.
 
 // But learning them is important because they teach three different fundamental techniques:
+
+
+#include<iostream>
+using namespace std;
+int main(){
+    int arr[]={0,34,5,67,4};
+    int n =5;
+    for(int i=0;i<n-1;i++){
+        for(int j=0;j<n-i-1;j++){                     //BUBBLE SORT
+            if(arr[j]>arr[j+1]){
+                swap(arr[j],arr[j+1]);
+            }
+        }
+
+    }
+    for(int num : arr){
+        cout<<num<<" ";
+    }
+}
+
+
+#include<iostream>
+using namespace std;
+int main(){
+    int arr[]={0,34,5,67,4};
+    int n =5;
+    for(int i=0;i<n-1;i++){                            //SELECTION SORT
+        int minIDx = i;
+        for(int j=i+1;j<n;j++){
+            if(arr[j]<arr[minIDx]){
+                minIDx = j;
+            }
+
+        }
+        swap(arr[minIDx],arr[i]);
+    }
+        for(int num : arr){
+        cout<<num<<" ";
+    }
+}
+
+
+
+#include<iostream>
+using namespace std;                                  //INSERTION SORT
+int main(){
+    int arr[]={0,34,5,67,4};
+    int n =5;
+    for(int i=1;i<n;i++){
+        int current = arr[i];     // We store arr[i] in current because the array changes while shifting elements.
+                                  // If we use current = i and then arr[current], its value may change during shifting, so we would lose the original element.
+        int previous = i-1;    
+        while(previous>=0 && arr[previous]>current){
+            arr[previous+1]=arr[previous];
+            previous--;
+        }
+      arr[previous+1]=current;
+    }
+         for(int num : arr){
+        cout<<num<<" ";
+    }
+    
+}
+
+
+
+
+
