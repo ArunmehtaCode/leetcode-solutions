@@ -11,7 +11,7 @@ using namespace std;
 int main(){
     int arr[]={1,4,3,1,5,4,0,9};
     int n=8;                                     // for perfect code understanding you can see CB_DSAcode file
-    for(int i=0;i<n-1;i++){
+    for(int i=0;i<n-1;i++){                      // for better understanding by dry run check the notes of lecture 11 (stared tab)
         int minIdx = i;
         for(int j=i+1;j<n;j++){
             if(arr[j]<arr[minIdx]){
@@ -39,3 +39,10 @@ int main(){
 // a constant amount of extra space.
 //
 // Note: Selection Sort performs at most O(n) swaps, which is fewer swaps than Bubble Sort.
+
+
+       //The easiest way to remember the difference is:
+
+//Bubble = swap neighbors
+//Selection = find minimum, then swap
+//Insertion = pick an element, then insert it into the sorted part
