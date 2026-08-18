@@ -7,8 +7,8 @@ using namespace std;
 int main(){
     int arr[] = {1,34,567,23,0,45};
     int n =6;
-    for(int i=1; i<=n-1; i++){
-        bool flag =false; 
+    for(int i=1; i<=n-1; i++){                // for perfect code understanding you can see CB_DSAcode file 
+        bool flag =false;                     // for better understanding by dry run check the notes of lecture 11 (stared tab)
         for(int j=0; j<n-i; j++){
         if(arr[j]>arr[j+1]){
             swap(arr[j],arr[j+1]);
@@ -29,3 +29,9 @@ int main(){
      // average time complexity is lie between n and n² --> occurs when array is partially sorted .
      // Worst Time Complexity i O(n²)  --> Occurs when the array is sorted in reverse .
      // Space Complexity is O(1)
+
+       //The easiest way to remember the difference is:
+
+//Bubble = swap neighbors
+//Selection = find minimum, then swap
+//Insertion = pick an element, then insert it into the sorted part
