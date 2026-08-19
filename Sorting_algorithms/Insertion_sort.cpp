@@ -71,11 +71,23 @@ void insertion(int arr[], int n){
         arr[prev+1]=current;
     }
 }
+ //or by for loop in both
+ void insertion_for(int arr[], int n){
+    for(int i=1;i<n;i++){
+        int current = arr[i];
+        int j;
+        for( j = i-1; j>=0 && arr[j]>current ; j--){
+            arr[j+1]=arr[j];
+        }
+        arr[j+1]=current;
+    }
+ }
 
 int main(){
     int num[]={1,4,3,1,5,0};
     int n=6; 
-    insertion(num,n);
+    //   insertion(num,n);
+     insertion_for(num,n);
     for(int a : num){
         cout<<a<<" ";
     }
