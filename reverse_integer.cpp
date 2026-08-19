@@ -25,3 +25,7 @@ int main(){
    else cout<<"0";
    
 }
+
+    //It also  works for negative numbers as well
+    //because of how % and / behave with negative integers in C++.
+         //-123 % 10 = -3 , -123 / 10 = -12
