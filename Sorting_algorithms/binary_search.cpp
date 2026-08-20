@@ -1,3 +1,4 @@
+ // Iterative / optimized binary search approach
 #include<iostream>
 using namespace std;
 
@@ -40,4 +41,43 @@ int main() {
 	cout << binarySearch(arr, n, t) << endl;
 
 	return 0;
-}
+} 
+   // time complexity -->
+// best case - O(N)  ,The target element is located exactly at the middle index during the very first comparison.
+// average case - O(log N)
+//  worst case - O(log N)
+   // space complexity --> O(1)
+
+
+
+                         //using recursive binary search
+
+   int recbinarysearch(int arr[] , int tar ,int start ,int end){
+    if(start<=end){
+        int mid = start + (end - start)/2 ;
+        if( arr[mid]>tar){
+            return recbinarysearch(arr , tar ,start , mid - 1);
+        }
+        else if(arr[mid]<tar){
+            return recbinarysearch(arr ,tar , mid+1 , end);
+        }
+        else{  // int [mid] == target
+            return mid;
+        }
+
+    }
+    return -1;  // s > e and nothing return means target was not found
+
+   }
+   int main() {
+
+	int arr[] = {10, 20, 30, 40, 50, 60, 70};
+	int t = 70;
+
+	cout << recbinarysearch(arr, t ,0,6) << endl;
+
+	return 0;
+} 
+
+  // time complexity --> O(log N)
+  // space complexity --> O(log N)
