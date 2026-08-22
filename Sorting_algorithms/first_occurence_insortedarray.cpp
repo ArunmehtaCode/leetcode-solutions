@@ -20,7 +20,7 @@ int first_occcur(int arr[], int n , int target){
         }
     }
     return ans;
-}
+} 
 int main(){
     int arr[] = {1,2,5,5,5,5,6,6,7,9};
     int n = sizeof(arr)/sizeof(int);
