@@ -28,7 +28,7 @@ public:
             if (prime)
                 count++;
         }
-
+ 
         return count;
     }
 };
