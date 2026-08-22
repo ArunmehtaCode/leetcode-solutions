@@ -16,4 +16,4 @@ int main(){
                     //and in the end we will left with 0 and a uniqye no and on xor the unique number with 0 will give us the unique number
     }
     cout<<"the unique number is"<<ans;
-}
+}  
