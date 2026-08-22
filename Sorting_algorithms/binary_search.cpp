@@ -39,7 +39,7 @@ int main() {
 	int t = 60;
 
 	cout << binarySearch(arr, n, t) << endl;
-
+ 
 	return 0;
 } 
    // time complexity -->
